@@ -38,7 +38,7 @@
                 {{ $categories->appends(request()->query())->links('pagination::default') }}
             </div>
             <div class="col-12">
-                <a href="{{ route('category.create') }}" class="btn btn-primary btn-lg btn-block">Nuevo Autor</a>
+                <a href="{{ route('category.create') }}" class="btn btn-primary btn-lg btn-block">Nueva Categoria</a>
             </div>
         </div>
     </div>

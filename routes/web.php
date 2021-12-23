@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\MovieController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,3 +22,4 @@ Route::get('/', function () {
 
 Route::resource('author', AuthorController::class)->names('author');
 Route::resource('category', CategoryController::class)->names('category');
+Route::resource('movie', MovieController::class)->names('movie');

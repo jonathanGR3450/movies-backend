@@ -23,7 +23,7 @@ class Author extends Model
 
     public function movie()
     {
-        return $this->belongsTo(Movie::class);
+        return $this->hasMany(Movie::class);
     }
 
     public function present()

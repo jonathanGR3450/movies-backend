@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Presenters\Movies\MoviePresenter;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -26,11 +27,16 @@ class Movie extends Model
 
     public function author()
     {
-        return $this->hasMany(Author::class);
+        return $this->belongsTo(Author::class);
     }
 
     public function category()
     {
-        return $this->hasMany(Category::class);
+        return $this->belongsTo(Category::class);
+    }
+
+    public function present()
+    {
+        return new MoviePresenter($this);
     }
 }
