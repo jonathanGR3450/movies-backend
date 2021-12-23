@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Presenters\Categories\CategoryPresenter;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -23,5 +24,10 @@ class Category extends Model
     public function movie()
     {
         return $this->belongsTo(Movie::class);
+    }
+
+    public function present()
+    {
+        return new CategoryPresenter($this);
     }
 }

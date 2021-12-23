@@ -7,8 +7,8 @@
     {{-- se puede enviar como segundo parametro el contenido para mostrar por defecto si no esta definido --}}
     <title>@yield('title', 'test')</title>
     {{-- <link rel="stylesheet" href="css/app.css?id=6f99709f605f271ed6fb"> --}}
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-    <script src="{{ mix('js/app.js') }}" defer></script>
+    {{-- <link rel="stylesheet" href="{{ mix('css/app.css') }}"> --}}
+    {{-- <script src="{{ mix('js/app.js') }}" defer></script> --}}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

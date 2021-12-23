@@ -2,6 +2,10 @@
 
 namespace App\Providers;
 
+use App\Http\Repositories\Author\AuthorDecorator;
+use App\Http\Repositories\Author\AuthorInterface;
+use App\Http\Repositories\Category\CategoryDecorator;
+use App\Http\Repositories\Category\CategoryInterface;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +17,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind(
+            AuthorInterface::class,
+            AuthorDecorator::class
+        );
+
+        $this->app->bind(
+            CategoryInterface::class,
+            CategoryDecorator::class
+        );
     }
 
     /**
